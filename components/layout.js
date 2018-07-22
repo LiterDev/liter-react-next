@@ -18,3 +18,4 @@ export default ({ children, title = "This is the default title" }) => (
     <footer>{"I`m here to stay"}</footer>
   </div>
 );
+//export default connect(state => state)(Layout)
