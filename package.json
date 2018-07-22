@@ -1,0 +1,30 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "jss": "latest",
+    "es6-promise": "latest",
+    "isomorphic-unfetch": "latest",
+    "next": "latest",
+    "next-redux-saga": "latest",
+    "next-redux-wrapper": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-jss": "latest",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-saga": "latest"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "2.13.2"
+  }
+}
