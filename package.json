@@ -10,9 +10,10 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
-    "jss": "latest",
+    "dotenv": "^6.0.0",
     "es6-promise": "latest",
     "isomorphic-unfetch": "latest",
+    "jss": "latest",
     "next": "latest",
     "next-redux-saga": "latest",
     "next-redux-wrapper": "latest",

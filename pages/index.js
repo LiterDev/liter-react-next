@@ -83,8 +83,8 @@ class Index extends React.Component {
         >
           Super Secret Password
         </Button>
-        <Page title='Index Page' linkTo='/other' NavigateTo='Other Page' />
-        {/* {placeholder} */}
+        {/* <Page title='Index Page' linkTo='/other' NavigateTo='Other Page' /> */}
+        <div>Loading data from { process.env.BACKEND_URL2 }</div>
       </div>
     );
   }
