@@ -13,8 +13,9 @@ import { withStyles } from "@material-ui/core/styles";
 import Link from "next/link";
 // import Placeholder from '../components/Placeholder'
 import { loadData } from "../lib/placeholder/actions";
-import Page from "../components/page";
-import compose from "recompose/compose";
+import Page from "components/page";
+//import compose from "recompose";
+import { compose } from "recompose"
 import { connect } from "react-redux";
 
 const styles = theme => ({
@@ -95,7 +96,7 @@ Index.propTypes = {
 };
 
 //export default withReduxSaga(Index)
-export default withStyles(styles)(Index);
-// export default compose(
-//   withStyles(styles)
-// )(Index);
+//export default withStyles(styles)(Index);
+export default compose(
+  withStyles(styles)
+)(Index);
