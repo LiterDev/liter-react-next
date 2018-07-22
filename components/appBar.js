@@ -9,7 +9,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import AppDrawer from "../components/appDrawer";
 
-const styles = {
+//const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1
   },
@@ -19,11 +20,29 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  drawer: {
+    [theme.breakpoints.up("lg")]: {
+      width: 250
+    }
   }
-};
+});
 
 //function ButtonAppBar(props) {
 class ButtonAppBar extends React.Component {
+  state = {
+    mobileOpen: false
+  };
+
+  handleDrawerOpen = () => {
+    // this.props.dispatch(toggleAppDrawer());
+    this.setState({ mobileOpen: true });
+  };
+
+  handleDrawerClose = () => {
+    // this.props.dispatch(toggleAppDrawer());
+    this.setState({ mobileOpen: false });
+  };
   render() {
     const { classes } = this.props;
     return (
@@ -34,6 +53,7 @@ class ButtonAppBar extends React.Component {
               className={classes.menuButton}
               color="inherit"
               aria-label="Menu"
+              onClick={this.handleDrawerOpen}
             >
               <MenuIcon />
             </IconButton>
@@ -48,6 +68,13 @@ class ButtonAppBar extends React.Component {
           </Toolbar>
         </AppBar>
         {/* <AppDrawer /> */}
+        <AppDrawer
+          className={classes.drawer}
+          // disablePermanent={disablePermanent}
+          onClose={this.handleDrawerClose}
+          onOpen={this.handleDrawerOpen}
+          mobileOpen={this.state.mobileOpen}
+        />
       </div>
     );
   }
