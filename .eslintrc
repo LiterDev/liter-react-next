@@ -42,14 +42,5 @@
     "import/export": 1,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0
-  },
-  "devDependencies": {
-    "babel-eslint": "7.1.1",
-    "eslint": "3.11.1",
-    "eslint-config-airbnb": "13.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "2.2.3",
-    "eslint-plugin-react": "6.7.1"
   }
 }

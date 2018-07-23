@@ -7,11 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import AppDrawer from "../components/appDrawer";
+import AppDrawer from "./appDrawer";
 import { compose } from "recompose";
 import { connect } from "react-redux";
 
-import { toggleAppDrawer, increment } from "../lib/appBar/actions";
 //const styles = {
 const styles = theme => ({
   root: {
@@ -38,17 +37,16 @@ class ButtonAppBar extends React.Component {
   };
 
   handleDrawerOpen = () => {
-  
-    this.props.dispatch(increment());
+    // this.props.dispatch(increment());
     this.setState({ mobileOpen: true });
   };
 
   handleDrawerClose = () => {
-    this.props.dispatch(toggleAppDrawer());
+    // this.props.dispatch(toggleAppDrawer());
     this.setState({ mobileOpen: false });
   };
   render() {
-    const { classes, mobileOpenProp, count } = this.props;
+    const { classes, count } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="fixed">
@@ -66,7 +64,7 @@ class ButtonAppBar extends React.Component {
               color="inherit"
               className={classes.flex}
             >
-              Title <span>{count}</span>
+              Title
             </Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>
@@ -88,11 +86,10 @@ ButtonAppBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({ mobileOpenProp }) => ({ mobileOpenProp });
 // const mapStateToProps = ({ count }) => ({ count });
-//export default withStyles(styles)(ButtonAppBar);
-export default compose(
-  withStyles(styles),
-  connect(mapStateToProps)
-)(ButtonAppBar);
+export default withStyles(styles)(ButtonAppBar);
+// export default compose(
+//   withStyles(styles),
+//   connect(mapStateToProps)
+// )(ButtonAppBar);
 //export default connect(mapStateToProps)(Counter)

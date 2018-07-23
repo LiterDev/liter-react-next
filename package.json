@@ -26,8 +26,8 @@
     "react-redux": "latest",
     "redux": "latest",
     "redux-saga": "latest",
-    "redux-logger": "^3.0.6",
-    "reselect": "^3.0.1"
+    "redux-logger": "latest",
+    "reselect": "latest"
   },
   "devDependencies": {
     "redux-devtools-extension": "latest",
