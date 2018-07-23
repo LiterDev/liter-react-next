@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import classNames from 'classnames';
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 const styles = theme => ({
@@ -18,7 +18,7 @@ function AppDrawer(props) {
     <div>
       <SwipeableDrawer
         classes={{
-          paper: classNames(classes.paper, "algolia-drawer")
+          paper: classNames(classes.paper, 'algolia-drawer')
         }}
         variant="temporary"
         open={mobileOpen}

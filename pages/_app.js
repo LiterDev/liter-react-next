@@ -1,26 +1,25 @@
-import React from "react";
-import App, { Container } from "next/app";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import JssProvider from "react-jss/lib/JssProvider";
-import getPageContext from "../src/getPageContext";
-import Layout from "../components/layout";
-import { Provider } from 'react-redux'
-import withRedux from 'next-redux-wrapper'
-import withReduxSaga from 'next-redux-saga'
+import React from 'react';
+import App, { Container } from 'next/app';
+import { Provider } from 'react-redux';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import JssProvider from 'react-jss/lib/JssProvider';
+import getPageContext from '../src/getPageContext';
+import Layout from '../components/layout';
 
-import createStore from '../lib/withReduxSaga'
-
+import createStore from '../lib/withReduxSaga';
 
 class MyApp extends App {
-  static async getInitialProps ({ Component, ctx }) {
-    let pageProps = {}
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps({ ctx })
+      pageProps = await Component.getInitialProps({ ctx });
     }
 
-    return { pageProps }
+    return { pageProps };
   }
 
   constructor(props) {
@@ -32,7 +31,7 @@ class MyApp extends App {
 
   componentDidMount() {
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
+    const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
@@ -70,4 +69,4 @@ class MyApp extends App {
 }
 
 //export default MyApp;
-export default withRedux(createStore)(withReduxSaga({ async: true })(MyApp))
+export default withRedux(createStore)(withReduxSaga({ async: true })(MyApp));

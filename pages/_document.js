@@ -68,7 +68,7 @@ MyDocument.getInitialProps = ctx => {
     };
 
     WrappedComponent.propTypes = {
-      pageContext: PropTypes.object.isRequired,
+      pageContext: PropTypes.arrayOf(PropTypes.object).isRequired,
     };
 
     return WrappedComponent;
