@@ -12,10 +12,11 @@ export default ({ children, title = "This is the default title" }) => (
     <header>
       <AppBar />
     </header>
-
-    {children}
-
+    <div>{children}</div>
     <footer>{"I`m here to stay"}</footer>
+    <style jsx>{`
+      
+    `}</style>
   </div>
 );
 //export default connect(state => state)(Layout)
