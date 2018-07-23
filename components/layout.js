@@ -12,10 +12,12 @@ export default ({ children, title = "This is the default title" }) => (
     <header>
       <AppBar />
     </header>
-    <div>{children}</div>
+    <div className="content">{children}</div>
     <footer>{"I`m here to stay"}</footer>
     <style jsx>{`
-      
+      .content {
+        padding-top: 56px;
+      }
     `}</style>
   </div>
 );
