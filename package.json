@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "dotenv": "^6.0.0",
@@ -26,17 +25,19 @@
     "react-redux": "latest",
     "redux": "latest",
     "redux-saga": "latest",
-    "redux-logger": "^3.0.6",
-    "reselect": "^3.0.1"
+    "redux-logger": "latest",
+    "reselect": "latest"
   },
   "devDependencies": {
-    "redux-devtools-extension": "latest",
     "babel-eslint": "7.1.1",
     "eslint": "3.11.1",
     "eslint-config-airbnb": "13.0.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
-    "eslint-plugin-react": "6.7.1"
+    "eslint-plugin-react": "6.7.1",
+    "node-sass": "^4.9.2",
+    "redux-devtools-extension": "latest",
+    "styled-jsx-plugin-sass": "^0.2.0"
   }
 }
