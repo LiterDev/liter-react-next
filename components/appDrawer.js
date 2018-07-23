@@ -66,6 +66,11 @@ function AppDrawer(props, context) {
           SignUp
         </Typography>
       </Link>
+      <Link href="/my-page" onClick={onClose}>
+        <Typography variant="title" color="inherit">
+            My Page
+        </Typography>
+      </Link>
     </div>
   );
 
